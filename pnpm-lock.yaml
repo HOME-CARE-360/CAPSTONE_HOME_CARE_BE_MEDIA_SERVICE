@@ -154,8 +154,11 @@ importers:
         specifier: ^1.10.7
         version: 1.11.31
       '@types/express':
-        specifier: ^5.0.2
+        specifier: ^5.0.3
         version: 5.0.3
+      '@types/express-serve-static-core':
+        specifier: ^5.0.6
+        version: 5.0.6
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14

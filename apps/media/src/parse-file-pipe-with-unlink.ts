@@ -1,5 +1,6 @@
 import { ParseFileOptions, ParseFilePipe } from '@nestjs/common'
 import { unlink } from 'fs/promises'
+import { Express } from 'express';
 export class ParseFilePipeWithUnlink extends ParseFilePipe {
     constructor(options?: ParseFileOptions) {
         super(options)
