@@ -13,7 +13,6 @@ async function bootstrap() {
     options: {
       host: "0.0.0.0",
       port: configService.get("MEDIA_TCP_PORT")
-
     }
   })
   await app.startAllMicroservices()
