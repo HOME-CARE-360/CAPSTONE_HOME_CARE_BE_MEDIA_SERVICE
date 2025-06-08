@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FileValidator } from '@nestjs/common';
 
-
+import { Multer } from 'multer';
 export class ImageMimeTypeValidator extends FileValidator<{ allowedMimeTypes: string[] }> {
     constructor(private readonly options: { allowedMimeTypes: string[] }) {
         super(options);
