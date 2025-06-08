@@ -4,9 +4,8 @@ import { MediaController } from './media.controller';
 import { ConfigModule } from 'libs/common/src/modules/config.module';
 import { CommonModule } from 'libs/common/src';
 
-
 @Module({
-  providers: [MediaService,],
+  providers: [MediaService, CommonModule, ConfigModule],
   imports: [
     ConfigModule, CommonModule
   ],
