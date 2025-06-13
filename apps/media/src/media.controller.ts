@@ -10,7 +10,7 @@ import { MessagePattern } from '@nestjs/microservices';
 export class MediaController {
   constructor(private readonly mediaService: MediaService) { }
   @IsPublic()
-  @MessagePattern("images/upload/presigned-url")
+  @MessagePattern({ cmd: "images/upload/presigned-url" })
   async createPresignedUrl(@Body() body: PresignedUploadFileBodyDTO) {
     return await this.mediaService.getPresignUrl(body)
   }
