@@ -27,7 +27,7 @@ export class S3Service {
 
         const command = new PutObjectCommand({ Bucket: this.configService.get<string>("S3_BUCKET_NAME"), Key: filename, ContentType: contentType, })
         try {
-            getSignedUrl(this.s3, command, { expiresIn: 10 })
+            getSignedUrl(this.s3, command, { expiresIn: 30 })
 
         } catch (error) {
             console.log(error);
