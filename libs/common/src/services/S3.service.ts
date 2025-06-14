@@ -24,7 +24,6 @@ export class S3Service {
     createPresignedUrlWithClient(filename: string) {
         const contentType = mime.lookup(filename) || 'application/octet-stream'
 
-
         const command = new PutObjectCommand({ Bucket: this.configService.get<string>("S3_BUCKET_NAME"), Key: filename, ContentType: contentType, })
         try {
             getSignedUrl(this.s3, command, { expiresIn: 30 })
@@ -33,7 +32,7 @@ export class S3Service {
             console.log(error);
 
         }
-        return getSignedUrl(this.s3, command, { expiresIn: 10 })
+        return getSignedUrl(this.s3, command, { expiresIn: 30 })
 
 
 
